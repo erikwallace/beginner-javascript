@@ -12,3 +12,25 @@ Please PR this repo adding in other editor snippets as well.
 2. Type `>configure user snippets` and run the found command
 3. Select `html.json` from the list
 4. Paste the contents of `htmlbase.json` into the `{ }` of the file
+
+## Notes
+
+### Firefox
+
+- Open devtools - command + shift + c
+- Open console - command + shift + j
+
+***
+
+### Terminal
+
+- ls -l (list all directories)
+- pwd (tells us where we are)
+- cd .. (go up a level)
+
+***
+
+### Node
+
+- control c (go back to command line)
+- command k (clear out console)

@@ -1,5 +1,3 @@
-const p = document.querySelector('p');
-console.log('im in another file');
-
-const age = 100;
-console.log(p, age);
+const pExternal = document.querySelector('p');
+console.log(pExternal);
+console.log('I am a console log in another file.');

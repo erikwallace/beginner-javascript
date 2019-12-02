@@ -4,29 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Variables!</title>
+  <title>Fun with Variables!</title>
   <link rel="stylesheet" href="../base.css">
 </head>
 
 <body>
   <script>
-    // function scoped
-    var first = 'wes';
-    // block scoped
-    let age = 300;
-    let cool = true;
+    /*
+     * Variable names
+     * Should not start with a variable
+     * Should start with either a letter, $ or _
+     * Use camel case for multiple word variable names - 'firstName', 'emailAddress'
+     */
 
-    const Dog = 'bowser';
+    // Lints code to make sure code is written well
+    'use strict';
 
-    // camel case
-    const iLovePizza = true;
-    // UpperCamelCase
-    const ILoveToEatHotDogs = false;
-    // snake case!!
-    const this_is_snake_case = 'cool';
+    // Variable declaration statement, can be updated or changed - function scoped (only avaialable inside the parent function)
+    var name = 'Edmund';
 
+    // Change the value of name - block scoped
+    name = 'Josie';
 
+    // ES6 - Can be updated or changed
+    let age = 6;
 
+    /*
+     * Declaring a new variable? Use const by default
+     * If it needs to change later on > change to let
+     * ES6 - A constant variable - these SHOULD NOT be changed - block scoped
+     */
+    const boxer = true;
+
+    // Funciton call statements
+    console.log('name =' + ' ' + name);
+    console.log('age =' + ' ' + age);
+    console.log('boxer =' + ' ' + boxer);
   </script>
 </body>
 
