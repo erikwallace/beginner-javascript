@@ -16,6 +16,8 @@ More to come...
 3. Select `html.json` from the list
 4. Paste the contents of `htmlbase.json` into the `{ }` of the file
 
+***
+
 ### Firefox
 
 - Open devtools - command + shift + c
