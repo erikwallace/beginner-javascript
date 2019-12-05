@@ -1,50 +1,95 @@
-// const age = 100;
+/*
+ * BEST PRACTICES
+ *
+ * Limit use of global variables
+ * Use unique, descriptive names
+ */
 
-// function go() {
-//   const myAge = 200;
-//   const hair = 'blonde';
-//   console.log(age);
-//   console.log(myAge);
-//   console.log(hair);
-// }
+/* eslint-disable */
+
+/*
+ * Global Variables
+ *
+ * Can be accessed everywhere
+ * Use sparingly, they can cause issues with variables with the same name
+ */
+
+// not attached to window
+const firstName = 'Josie';
+
+// not attached to window
+let lastName = 'Wallace';
+
+// IS attached to window - ex. window.age
+// Be careful with var, they are NOT block scoped
+var age = 6;
+
+/*
+ * Variables in functions are NOT available outside the function
+ * Variables can only be accessed in a function if they are returned
+ */
+function go() {
+  const hairColor = 'brown';
+  const eyeColor = 'blue';
+}
 
 // go();
-/* eslint-disable*/
 
-// function isCool(name) {
-//   if (name === 'wes') {
-//     var cool = true;
-//   }
-//   console.log(cool);
-//   return cool;
-// }
+/*
+ * Block scoped variables
+ *
+ * How do you access a variable inside { block }?
+ * Declare it outside, then set it inside the block
+ * Nice because these keep variables from leaking into other code
+ */
+let cool;
+if (1 === 1) {
+  cool = true;
+}
 
-// for(let i = 0; i < 10; i++) {
-//   console.log(i);
-// }
+console.log(cool);
 
+/*
+ * Function scoped variable
+ * Best practice - access allow declare it before and return it
+ */
+function allowAccess(name) {
+  let allow;
+  if (name === 'admin') {
+    allow = true;
+  }
+  console.log(allow);
+  return allow;
+}
 
-const dog = 'snickers';
+/*
+ * Scope Lookup
+ * JavaScript - Lexical or static scope
+ * JS looks at where functions are defined, not run
+ */
+const dog = 'Josie';
 
 function logDog(dog) {
   console.log(dog);
 }
 
-function go() {
-  const dog = 'sunny';
-  logDog('sunny');
+function getDogName() {
+  const dog = 'Eddie';
+  logDog('Jackson Colt');
 }
 
-go();
+getDogName();
 
-function yell() {
-  console.log(name.toUpperCase())
-}
 
-function sayHi(name) {
 
+/*
+ * Function Scoping
+ */
+function sayHello(name) {
+  function yell() {
+    console.log(name.toUpperCase())
+  }
   yell();
 }
-
 
 yell();
