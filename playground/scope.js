@@ -51,6 +51,7 @@ console.log(cool);
 
 /*
  * Function scoped variable
+ * This is a solid example - this will be the pattern used most often
  * Best practice - access allow declare it before and return it
  */
 function allowAccess(name) {
@@ -83,7 +84,8 @@ getDogName();
 
 
 /*
- * Function Scoping
+ * Function Scoping - functions inside of a parent will only be accessible to the parent
+ * That is an example of a closure
  */
 function sayHello(name) {
   function yell() {
