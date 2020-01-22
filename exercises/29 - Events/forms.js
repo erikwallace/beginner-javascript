@@ -34,3 +34,15 @@ signupForm.name.addEventListener('keyup', logEvent);
 signupForm.name.addEventListener('keydown', logEvent);
 signupForm.name.addEventListener('focus', logEvent);
 signupForm.name.addEventListener('blur', logEvent);
+
+const photo = document.querySelector('.photo');
+
+// Handle clicks and tabindex + enter
+function handlePhotoClick(event) {
+  if (event.type === 'click' || event.key === 'Enter') {
+    console.log('You selected the photo');
+  }
+}
+
+photo.addEventListener('click', handlePhotoClick);
+photo.addEventListener('keyup', handlePhotoClick);

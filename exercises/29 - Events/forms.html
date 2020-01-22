@@ -9,6 +9,20 @@
 
 	<body>
 		<div class="wrapper">
+			<!--- Does an image need to be clicked? -->
+			<div role="button" tabindex="0">I can be clicked</div>
+
+			<!-- If this image can be clicked make sure it can be without a mouse -->
+			<!-- Either place in a button or add role = button tabindex=0-->
+			<button>
+				<img
+					class="photo"
+					tabindex="0"
+					src="https://picsum.photos/200"
+					alt="Something descriptive"
+				/>
+			</button>
+
 			<a class="wes" href="https://wesbos.com">Wes Bos</a>
 			<form name="signup">
 				<label for="name">Name</label>
@@ -18,6 +32,9 @@
 				<input type="checkbox" id="agree" name="agree" />
 				<label for="agree">I agree to the terms and conditions</label>
 				<hr />
+				<!-- Links ARE NOT buttons -->
+				<!-- links take people to a different page -->
+				<!-- buttons are used for actions in applications -->
 				<button type="submit">Submit</button>
 			</form>
 		</div>
